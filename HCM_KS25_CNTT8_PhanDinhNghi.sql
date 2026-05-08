@@ -1,6 +1,6 @@
+-- DROP DATABASE CompanyDB;
 CREATE DATABASE CompanyDB;
 USE CompanyDB;
-DROP DATABASE CompanyDB;
 
 CREATE TABLE Department(
 	dept_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -101,7 +101,7 @@ WHERE salary >(SELECT AVG(salary)FROM Employees);
 
 SELECT *
 FROM Employees
-WHERE emp_id IN(SELECT emp_idFROM Project);
+WHERE emp_id IN(SELECT emp_id FROM Project);
 
 SELECT *
 FROM Employees e1
