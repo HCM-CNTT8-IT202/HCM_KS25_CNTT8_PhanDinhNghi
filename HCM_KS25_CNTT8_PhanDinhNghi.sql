@@ -96,8 +96,8 @@ GROUP BY d.dept_id, d.dept_name
 HAVING COUNT(e.emp_id) >= 2;
 
 SELECT *
-FROM Employee
-WHERE salary >(SELECT AVG(salary)FROM Employee);
+FROM Employees
+WHERE salary >(SELECT AVG(salary)FROM Employees);
 
 SELECT *
 FROM Employees
@@ -105,4 +105,4 @@ WHERE emp_id IN(SELECT emp_idFROM Project);
 
 SELECT *
 FROM Employees e1
-WHERE salary =(SELECT MAX(e2.salary) FROM Employee e2 WHERE e1.dept_id = e2.dept_id);
+WHERE salary =(SELECT MAX(e2.salary) FROM Employees e2 WHERE e1.dept_id = e2.dept_id);
