@@ -90,7 +90,7 @@ LIMIT 2;
 
 SELECT d.dept_name, COUNT(e.emp_id) AS total_employee
 FROM Department d
-INNER JOIN Employee e
+INNER JOIN Employees e
 ON d.dept_id = e.dept_id
 GROUP BY d.dept_id, d.dept_name
 HAVING COUNT(e.emp_id) >= 2;
@@ -100,9 +100,9 @@ FROM Employee
 WHERE salary >(SELECT AVG(salary)FROM Employee);
 
 SELECT *
-FROM Employee
+FROM Employees
 WHERE emp_id IN(SELECT emp_idFROM Project);
 
 SELECT *
-FROM Employee e1
+FROM Employees e1
 WHERE salary =(SELECT MAX(e2.salary) FROM Employee e2 WHERE e1.dept_id = e2.dept_id);
