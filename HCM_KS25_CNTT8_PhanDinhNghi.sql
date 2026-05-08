@@ -84,7 +84,7 @@ INNER JOIN Department d
 ON e.dept_id = d.dept_id;
 
 SELECT *
-FROM Employee
+FROM Employees
 ORDER BY salary DESC
 LIMIT 2;
 
